@@ -16,7 +16,7 @@ chmod +x ./fish.sh
 
 * accountName 随便起个账户名
 * port 端口
-* host 可直接指定 0.0.0.0
+* host 节点的host
 * blockGraffiti 从官网个人中心设置里获取
 
 ```
