@@ -9,10 +9,15 @@ cd ~
 git clone https://github.com/jerrkill/ironfish-start.git
 cd ~/ironfish-start
 chmod +x ./fish.sh
-./fish.sh init <accountName> <blockGraffiti>
+./fish.sh init <accountName> <port> <blockGraffiti>
 ```
 
 ## command
+
+* accountName 随便起个账户名
+* port 端口
+* host 可直接指定 0.0.0.0
+* blockGraffiti 从官网个人中心设置里获取
 
 ```
 ./fish.sh status
