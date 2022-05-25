@@ -8,18 +8,31 @@
 cd ~
 git clone https://github.com/jerrkill/ironfish-start.git
 cd ~/ironfish-start
-chmod +x ./start.sh
-./start.sh
+chmod +x ./fish.sh
+./fish.sh init <accountName> <blockGraffiti>
+```
+
+## command
+
+```
+./fish.sh status
+```
+
+```
+./fish.sh start <accountName> <port>
+```
+
+```
+./fish.sh mint <blockGraffiti>
 ```
 
 
-or
+```
+./fish.sh remoteMint <blockGraffiti> <host> <port>
+```
 
-```
-mkdir -p ~/ironfish
-cd ~/ironfish
-wget -qO- https://raw.githubusercontent.com/jerrkill/ironfish-start/master/start.sh | bash
-```
+
+check status
 
 `ironfish status`
 

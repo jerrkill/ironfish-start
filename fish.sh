@@ -23,7 +23,7 @@ function install() {
 
 function start() {
   ironfish accounts:create $1
-  FISH_RUN_PID=$(ironfish start >>$run_log 2>>$run_log </dev/null &)
+  FISH_RUN_PID=$(ironfish start --rpc.tcp --rpc.tcp.host=0.0.0.0 --rpc.tcp.port=$2 >>$run_log 2>>$run_log </dev/null &)
   ironfish status
 }
 
@@ -56,15 +56,15 @@ function print() {
 case $1 in
 init)
   install
-  start $2
-  mint $3
+  start $2 $3
+  mint $4
   print
   ;;
 install)
   install
   ;;
 start)
-  start $2
+  start $2 $3
   ;;
 mint)
   mint $2
@@ -76,6 +76,6 @@ status)
   ironfish status
   ;;
 usage|*)
-  echo "usage ./fish.sh init <accountName> <blockGraffiti>|install|start <accountName>|mint <blockGraffiti>|remoteMint <blockGraffiti> <host> <port>|usage"
+  echo "usage ./fish.sh init <accountName> <port> <blockGraffiti>|install|start <accountName> <port>|mint <blockGraffiti>|remoteMint <blockGraffiti> <host> <port>|usage"
   ;;
 esac
