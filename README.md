@@ -6,8 +6,8 @@
 ```
 # 以非root用户运行
 cd ~
-git clone xxx
-cd ~/ironfish
+git clone https://github.com/jerrkill/ironfish-start.git
+cd ~/ironfish-start
 chmod +x ./start.sh
 ./start.sh
 ```
@@ -18,7 +18,7 @@ or
 ```
 mkdir -p ~/ironfish
 cd ~/ironfish
-wget -qO- start.sh | bash
+wget -qO- https://raw.githubusercontent.com/jerrkill/ironfish-start/master/start.sh | bash
 ```
 
 `ironfish status`
@@ -27,7 +27,8 @@ wget -qO- start.sh | bash
 
 # logs
 
-`tail -f ~/ironfish/logs/run.log`
-`tail -f ~/ironfish/logs/mint.log`
+`tail -f ~/ironfish-start/logs/run.log`
+
+`tail -f ~/ironfish-start/logs/mint.log`
 
 
