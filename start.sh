@@ -1,6 +1,6 @@
 #!/bin/bash
 
-accountName="jkk"
+accountName="JK"
 ROOT_DIR=$(pwd)
 NODE_VERSION="16.15.0"
 DATA_DIR="$ROOT_DIR/data"
@@ -21,6 +21,7 @@ function init() {
 }
 
 function start() {
+  ironfish accounts:create "JackSong"
   ironfish start >>$run_log 2>>$run_log </dev/null &
   #disown
   ironfish config:set blockGraffiti "$accountName"
